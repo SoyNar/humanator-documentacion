@@ -18,12 +18,12 @@ const config: Config = {
   url: 'https://github.com/SoyNar',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: 'https://github.com/SoyNar/humanator-documentacion',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'SoyNar', // Usually your GitHub org/user name.
+  projectName: 'Humanator documentacion', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
