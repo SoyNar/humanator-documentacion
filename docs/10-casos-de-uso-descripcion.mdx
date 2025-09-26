@@ -1,0 +1,121 @@
+# 📝 Casos de uso Descrpcion
+
+En esta sección se describen los **casos de uso principales** del sistema Descrpcion**, para entender cómo interactúan los usuarios con las diferentes funcionalidades.
+
+---
+
+## 1. Inicio de sesión y Tablero principal
+
+**Actor principal:** Funcionario  
+**Objetivo:** Acceder a la intranet y visualizar su información.  
+**Flujo básico:**
+1. El funcionario ingresa usuario y contraseña en el formulario de **Login**.
+2. El sistema valida las credenciales.
+3. Se muestra el tablero con:
+   - Nombre, cargo y categoría institucional (Junta Directiva, Comité, etc.).
+   - Indicador de horario y puntos acumulados.
+   - Fecha de próximas vacaciones.
+   - Acceso a solicitudes (vacaciones, renuncias).
+
+**Resultado esperado:** El usuario ingresa y visualiza su información personalizada.
+
+---
+
+## 2. Acumulación de puntos
+
+**Actor principal:** Administrador (QNodo)  
+**Objetivo:** Asignar puntos a los funcionarios según objetivos e indicadores.  
+**Flujo básico:**
+1. El administrador define los indicadores y puntos desde la interfaz de parametrización.
+2. El sistema considera variables predeterminadas: **antigüedad**, **escolaridad** e **indicadores individuales**.
+3. El funcionario visualiza en su tablero el total de puntos acumulados.
+
+**Resultado esperado:** El sistema actualiza y muestra el puntaje del funcionario.
+
+---
+
+## 3. Redención de puntos para permisos
+
+### 3.1 Permisos no justificados (con puntos)
+**Actor principal:** Funcionario  
+**Flujo básico:**
+1. El funcionario abre el módulo **Solicitud de permisos**.
+2. Selecciona en el calendario fecha y hora del permiso.
+3. El sistema valida si tiene puntos (Qoins) suficientes.
+4. Si cumple, se registra la novedad sin afectar el indicador de horario.
+
+**Resultado esperado:** El permiso se otorga y se descuenta el puntaje correspondiente.
+
+---
+
+### 3.2 Permisos justificados (con evidencia)
+**Actor principal:** Funcionario  
+**Flujo básico:**
+1. El funcionario ingresa al módulo **Permisos justificados**.
+2. Adjunta la evidencia correspondiente.
+3. El sistema notifica al jefe inmediato.
+4. El jefe autoriza y el sistema registra la novedad.
+
+**Resultado esperado:** El permiso queda aprobado sin requerir puntos.
+
+---
+
+## 4. Gestión de Bonos y Canjes
+
+**Actor principal:** Administrador de QNodo  
+**Objetivo:** Crear y administrar recompensas para canje.  
+**Flujo básico:**
+1. El administrador registra la estrategia (nombre, descripción, vigencia, costo en puntos, cantidad o monto disponible).
+2. El sistema la muestra en el catálogo de **Bonos disponibles** para los funcionarios.
+3. El funcionario selecciona el bono a redimir.
+4. El sistema descuenta puntos y actualiza el historial.
+
+**Resultado esperado:** El empleado canjea satisfactoriamente sus puntos por la recompensa disponible.
+
+---
+
+## 5. Extracto de puntos
+
+**Actor principal:** Funcionario  
+**Objetivo:** Consultar historial de acumulación y gasto de puntos.  
+**Flujo básico:**
+1. El funcionario abre la sección **Extracto**.
+2. Se muestran registros:
+   - Verdes (+) por acumulación.
+   - Rojos (–) por redención u otros gastos.
+
+**Resultado esperado:** El usuario visualiza de forma clara el detalle de sus puntos.
+
+---
+
+## 6. Módulo de Personal
+
+**Actor principal:** Funcionario y Administrador  
+**Objetivo:** Consultar y administrar información personal y profesional.  
+**Incluye:**
+- Hoja de vida estandarizada.
+- Datos personales y laborales.
+- Habilidades técnicas y blandas.
+- Logros, premios y foto de perfil.
+
+**Resultado esperado:** Cada funcionario tiene un perfil completo visible y actualizado.
+
+---
+
+## 7. Comunicación interna
+
+**Actor principal:** Encargado de comunicaciones (Karen Zapata)  
+**Objetivo:** Publicar y administrar contenido interno.  
+**Flujo básico:**
+1. El encargado crea publicaciones (noticias, logros, campañas) desde el panel de administración.
+2. Configura rango de fechas y horario de visualización.
+3. Activa/desactiva publicaciones según las necesidades.
+4. Los funcionarios ven el contenido en el panel de comunicaciones.
+
+**Resultado esperado:** Las publicaciones se muestran al personal según la programación definida.
+
+---
+
+## 🟢 Notas generales
+- Las reglas de asignación de puntos, permisos y bonos son **configurables** desde el panel del administrador.
+- El sistema debe cumplir con los estándares de seguridad y disponibilidad mencionados en los requerimientos.

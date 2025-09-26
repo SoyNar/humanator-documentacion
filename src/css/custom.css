@@ -1,0 +1,66 @@
+/**
+ * Paleta fresca y minimalista para Humanator
+ * Colores variados y vibrantes
+ */
+
+/* Tema claro - Colores frescos */
+:root {
+  /* Verde menta como color principal */
+  --ifm-color-primary: #065353;
+  --ifm-color-primary-dark: #059669;
+  --ifm-color-primary-darker: #047857;
+  --ifm-color-primary-darkest: #065f46;
+  --ifm-color-primary-light: #34d399;
+  --ifm-color-primary-lighter: #6ee7b7;
+  --ifm-color-primary-lightest: #d1fae5;
+
+  /* Configuraciones básicas */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(16, 185, 129, 0.1);
+}
+
+/* Tema oscuro - Versión nocturna fresca */
+[data-theme='dark'] {
+  /* Turquesa suave para tema oscuro */
+  --ifm-color-primary: #b1e4e4;
+  --ifm-color-primary-dark: #53777a;
+  --ifm-color-primary-darker: #1c2629;
+  --ifm-color-primary-darkest: #20383f;
+  --ifm-color-primary-light: #0e1718;
+  --ifm-color-primary-lighter: #092a2e;
+  --ifm-color-primary-lightest: #285155;
+
+  --docusaurus-highlighted-code-line-bg: rgba(34, 211, 238, 0.2);
+}
+.docs-mdx h1 {
+  text-align: center;   
+  margin-bottom: 30px;  
+  font-size: 32px;  
+  font-weight: bold;
+}
+
+.custom {
+  background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+  border-left: 4px solid #f39c12;
+  color: #856404;
+  padding: 20px;
+  border-radius: 6px;
+  margin: 20px auto;
+  max-width: 480px;
+  text-align: center;
+}
+
+.construccion .emoji {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 8px;
+}
+.page-centered h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #f3d83f;
+}
+
+.title {
+  text-align: center;
+}
