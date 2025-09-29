@@ -1,11 +1,119 @@
+---
+id: arquitectura
+title: Arquitectura
+sidebar_label: Arquitectura
+---
 
 <div className="page-centered">
-# Arquitectura
+  # Arquitectura
 </div>
+
 <div className="custom">
-  <span className="emoji">🚧</span>
-  <strong>Esta página está en construcción</strong>
+  <span className="emoji">🏗️</span>
+  <strong>Arquitectura de la aplicación</strong>
   <br />
-  <small>Pronto añadiremos toda la información de Arquitectura.</small>
+  <small>
+    La aplicación está construida con <strong>Laravel (back-end)</strong> y <strong>Angular (front-end)</strong>, 
+    siguiendo buenas prácticas de separación por capas y por módulos de negocio.
+  </small>
 </div>
+
+---
+
+##  1. Descripción general
+
+```text
+[ Usuario ]
+     ⬇️ Navegador
+[ Angular SPA ]
+     ⬇️ (HTTP JSON)
+[ Laravel API ]
+     ⬇️
+[ Base de Datos ]
+```
+Nuestra aplicación sigue una arquitectura Cliente–Servidor de tipo SPA (Single Page Application):
+
+**Frontend:** Angular → Se encarga de la **interfaz de usuario.** Toda la navegación es dinámica sin recargar la página, y consume la API del backend.
+
+**Backend:** Laravel → Provee un **REST API** que gestiona la lógica de negocio, validaciones, seguridad (auth/JWT) y acceso a datos.
+Base de datos: MySQL , gestionada mediante **Eloquent ORM** en Laravel.
+La comunicación entre Angular y Laravel se hace mediante **JSON** sobre **HTTP/HTTPS**, asegurando un intercambio ligero de datos.
+
+
+##  Backend — Laravel
+
+La aplicación en el servidor utiliza una **arquitectura en capas inspirada en DDD (Domain-Driven Design)**, que organiza el código para mantener la **lógica de negocio aislada** del framework:
+
+```bash
+src/
+├── Auth/                  # Login, registro, manejo de sesiones, JWT
+│   ├── Domain/
+│   ├── Services/
+│   └── Repositories/
+
+├── Users/                 # Gestión de empleados (roles, perfiles)
+│   ├── Domain/
+│   ├── Services/
+│   └── Repositories/
+
+├── Rewards/               # Puntos, catálogo de premios, redenciones
+│   ├── Domain/
+│   ├── Services/
+│   └── Repositories/
+
+├── Communications/        # Publicaciones, avisos, comentarios
+│   ├── Domain/
+│   ├── Services/
+│   └── Repositories/
+
+└── Shared/                # Cosas comunes a varios módulos
+    ├── Exceptions/
+    ├── ValueObjects/
+    ├── Traits/
+    └── Providers/         # Bindings de interfaces -> implementaciones
+
+
+```
+```bash
+app/
+└── Http/
+    └── Controllers/       # Controladores tradicionales de Laravel
+```
+
+##  Frontend  —  Angular
+
+El cliente web esta organizado con arquitectura modular basada en features, para que cada funcionalidad tenga su propio espacion (codigo,servicios y vistas).
+
+### ¿Qué es una Feature?
+
+En el **Front** una  **feature**  representa una funcionalidad completa de la aplicación, agrupanda en un solo lugar.
+**Ejemplo:** Modulo de empleados, Recompensas,Comunicacion interna.
+Suele ser un modulo propio que contiene todo lo necesario para funcionar de manera autonoma..
+
+```bash
+src/app
+│
+├── core/                  # Capa central: interceptors, guards, servicios globales (Auth, Config)
+│
+├── shared/                # Componentes reutilizables (botones, pipes, directivas)
+│
+└── features/              # Módulos por dominio/feature
+    ├── employees/
+    │   ├── pages/         # Páginas principales de Employees
+    │   ├── components/    # Componentes internos
+    │   ├── services/      # Servicios solo de Employees
+    │   └── employees.module.ts
+    │
+    ├── rewards/
+    │   ├── pages/
+    │   ├── components/
+    │   ├── services/
+    │   └── rewards.module.ts
+    │
+    └── communications/
+        ├── pages/
+        ├── components/
+        ├── services/
+        └── communications.module.ts
+```
 

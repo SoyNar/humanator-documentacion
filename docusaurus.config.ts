@@ -15,17 +15,18 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://github.com/SoyNar',
+  url: 'https://soynar.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: 'https://github.com/SoyNar/humanator-documentacion',
+  baseUrl: '/humanator-documentacion',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'SoyNar', // Usually your GitHub org/user name.
-  projectName: 'Humanator documentacion', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
+  projectName: 'Humanator-documentacion', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -61,7 +62,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Humanator Documentacion',
+      title: 'Humanator-Documentacion',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -73,7 +74,7 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        // {to: '/blog', label: 'bl', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
@@ -84,49 +85,7 @@ const config: Config = {
    footer: {
   style: 'dark',
   links: [
-    {
-      title: 'Documentación',
-      items: [
-        {
-          label: 'Introducción',
-          to: '/docs/01-introduccion',
-        },
-        {
-          label: 'Alcance',
-          to: '/docs/02-alcance',
-        },
-        {
-          label: 'Requerimientos',
-          to: '/docs/03-requerimientos-funcionales',
-        },
-      ],
-    },
-    {
-      title: 'Comunidad',
-      items: [
-        {
-          label: 'Soporte Interno',
-          href: 'mailto:soporte@gc.com', // cambia al correo real
-        },
-        {
-          label: 'QNodo',
-          href: 'https://www.qnodo.com', // cambia si tienen web
-        },
-      ],
-    },
-    {
-      title: 'Más',
-      items: [
-        {
-          label: 'Noticias Internas',
-          to: '/docs/07-comunicacion-interna',
-        },
-        {
-          label: 'GitHub',
-          href: 'https://github.com/mi-org/humanator', // cambia al repo real
-        },
-      ],
-    },
+   
   ],
   copyright: `Copyright © ${new Date().getFullYear()} Humanator — Sistema Automático de Gestión Humana.`,
 },
