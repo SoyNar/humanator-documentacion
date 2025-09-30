@@ -2,6 +2,10 @@
  * Paleta fresca y minimalista para Humanator
  * Colores variados y vibrantes
  */
+ @import './que-hace-humanator.css';
+ @import './introduccion.css';
+
+
 
 /* Tema claro - Colores frescos */
 :root {

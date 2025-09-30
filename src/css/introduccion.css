@@ -1,0 +1,61 @@
+/* Título principal */
+.title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #cfdbe7;
+  margin-bottom: 2rem;
+}
+
+/* Caja de objetivo */
+.objetivo-box {
+  background-color: #131618;
+  border-left: 5px solid #0077cc;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Público objetivo */
+.publico-target {
+  background: #130a0a;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+}
+
+/* Primeros pasos */
+.primeros-pasos {
+  background-color: #14100a;
+  border-left: 5px solid #d4b78a;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.primeros-pasos a {
+  color: #cf8a75;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.primeros-pasos a:hover {
+  text-decoration: underline;
+}
+
+/* Nota informativa */
+.nota-info {
+  background-color: #0e0f0e;
+  border-left: 5px solid #4caf50;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #9da79e;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
