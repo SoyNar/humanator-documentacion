@@ -65,7 +65,7 @@ const config: Config = {
       title: 'Humanator-Documentacion',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/humanator-3.svg',
       },
       items: [
         {

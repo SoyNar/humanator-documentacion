@@ -12,7 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: '📘 Documentación Clara',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/people.svg').default,
     description: (
       <>
       Toda la información de Humanator organizada de forma sencilla.
@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: '⚡ Rápido y Ligero',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/recursos-humanos.svg').default,
     description: (
       <>
        Accede a los módulos y requerimientos en segundos, sin complicaciones.
@@ -30,7 +30,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: '🔗 Integrado con tu equipo',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/reunion.svg').default,
     description: (
       <>
         Comparte la documentación en tu red local o despliega online fácilmente.

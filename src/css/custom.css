@@ -26,13 +26,13 @@
 /* Tema oscuro - Versión nocturna fresca */
 [data-theme='dark'] {
   /* Turquesa suave para tema oscuro */
-  --ifm-color-primary: #b1e4e4;
+  --ifm-color-primary: #706c6c;
   --ifm-color-primary-dark: #53777a;
-  --ifm-color-primary-darker: #1c2629;
-  --ifm-color-primary-darkest: #20383f;
-  --ifm-color-primary-light: #0e1718;
-  --ifm-color-primary-lighter: #092a2e;
-  --ifm-color-primary-lightest: #285155;
+  --ifm-color-primary-darker: #865409;
+  --ifm-color-primary-darkest: #aad1dd;
+  --ifm-color-primary-light: #83dde7;
+  --ifm-color-primary-lighter: #d6eaec;
+  --ifm-color-primary-lightest: #c9e9ec;
 
   --docusaurus-highlighted-code-line-bg: rgba(34, 211, 238, 0.2);
 }
